@@ -3,4 +3,10 @@ Source files for the Augmented Realities module assignment @ Goldsmiths Universi
 
 Contributors:
 Joshua J. Davies
+https://github.com/MilesJMaiden
+
+Siming WANG
+https://github.com/simingw2209163
+
+
 ...
