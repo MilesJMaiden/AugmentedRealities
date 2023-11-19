@@ -5,8 +5,12 @@ Contributors:
 Joshua J. Davies
 https://github.com/MilesJMaiden
 
+Samuel Ding
+https://github.com/Tartarus12
+
 Siming WANG
 https://github.com/simingw2209163
 
-
+Wenqu Tang
+https://github.com/weather-sketch
 ...
