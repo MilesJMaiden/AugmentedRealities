@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &747806495401477014
+--- !u!1 &3228252290404735109
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 747806495401477035}
-  - component: {fileID: 747806495401477012}
-  - component: {fileID: 3492968334703562747}
+  - component: {fileID: 5256360663830173819}
+  - component: {fileID: 7391653433428557701}
+  - component: {fileID: 5199167004293059431}
   m_Layer: 0
-  m_Name: GameOVRSceneManager
+  m_Name: PassthroughDepthManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &747806495401477035
+--- !u!4 &5256360663830173819
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747806495401477014}
+  m_GameObject: {fileID: 3228252290404735109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,37 +33,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &747806495401477012
+--- !u!114 &7391653433428557701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747806495401477014}
+  m_GameObject: {fileID: 3228252290404735109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2253d75e3ddc644b8153409c62dd74e, type: 3}
+  m_Script: {fileID: 11500000, guid: ddd9160392010594198e19590e3e2244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlanePrefab: {fileID: 102490448831091297, guid: 78f6bddab1146ea4b914fc4452527b81, type: 3}
-  VolumePrefab: {fileID: 8013016026686888416, guid: 290a54c47a312b74c9e4c50564130622, type: 3}
-  PrefabOverrides:
-  - Prefab: {fileID: 4025537716497158586, guid: 6f3bf0e0ded501443a23c37d0a6bf934, type: 3}
-    ClassificationLabel: GLOBAL_MESH
-    _editorClassificationIndex: 16
-  ActiveRoomsOnly: 1
-  VerboseLogging: 0
-  MaxSceneAnchorUpdatesPerFrame: 3
-  _initialAnchorParent: {fileID: 0}
---- !u!114 &3492968334703562747
+  Enable6DoFCalculations: 1
+  Enable3DoFCalculations: 0
+  CustomTrackingSpaceTransform: {fileID: 0}
+--- !u!114 &5199167004293059431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747806495401477014}
+  m_GameObject: {fileID: 3228252290404735109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1c4a1713e5d1b4409a95470bcf9e5b8, type: 3}
+  m_Script: {fileID: 11500000, guid: a4b13589911d00d49bb8395c49568d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _occlusionType: 2
