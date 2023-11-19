@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.meta.xr.depthapi": {
+      "version": "https://github.com/oculus-samples/Unity-DepthAPI.git?path=/Packages/com.meta.xr.depthapi",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.oculus": "4.2.0-exp-env-depth.1"
+      },
+      "hash": "da16287bfe0a792207b5f079e9da14307b312259"
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.7",
       "depth": 0,
@@ -169,11 +178,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.0.0",
-      "depth": 0,
+      "version": "4.2.0-exp-env-depth.1",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.management": "4.2.0"
+        "com.unity.xr.management": "4.4.0"
       },
       "url": "https://packages.unity.com"
     },
