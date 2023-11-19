@@ -468,6 +468,18 @@ PrefabInstance:
       propertyPath: VolumePrefab
       value: 
       objectReference: {fileID: 8013016026686888416, guid: 290a54c47a312b74c9e4c50564130622, type: 3}
+    - target: {fileID: 747806495401477012, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
+      propertyPath: PrefabOverrides.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 747806495401477012, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
+      propertyPath: PrefabOverrides.Array.data[0].ClassificationLabel
+      value: GLOBAL_MESH
+      objectReference: {fileID: 0}
+    - target: {fileID: 747806495401477012, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
+      propertyPath: PrefabOverrides.Array.data[0]._editorClassificationIndex
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 747806495401477014, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
       propertyPath: m_Name
       value: GameOVRSceneManager
