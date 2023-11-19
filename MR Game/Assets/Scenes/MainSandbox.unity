@@ -460,6 +460,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 747806495401477012, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
+      propertyPath: PlanePrefab
+      value: 
+      objectReference: {fileID: 102490448831091297, guid: 4ed6ba3a6f904784fa6556d4919238b7, type: 3}
+    - target: {fileID: 747806495401477012, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
+      propertyPath: VolumePrefab
+      value: 
+      objectReference: {fileID: 8013016026686888416, guid: ef3f427bd1f66494ca7ce55d0c02b961, type: 3}
     - target: {fileID: 747806495401477014, guid: 580b4ed4f782a52488da4f77150ef636, type: 3}
       propertyPath: m_Name
       value: GameOVRSceneManager
