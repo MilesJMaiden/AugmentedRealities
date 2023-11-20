@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9100807833490731957}
   - component: {fileID: 6663771172424789803}
   - component: {fileID: 2777727739431396566}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Y
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8881854014648803716}
   - component: {fileID: 4330083078843298782}
   - component: {fileID: 3004955002489525247}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 670190173264333139}
   - component: {fileID: 102490448831091297}
   - component: {fileID: 7386310950961461930}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Plane Shadow Reciever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 877509473294036173}
   - component: {fileID: 8190763787906374832}
   - component: {fileID: 2402259853904447295}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Z
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 1269160742406245075}
   - component: {fileID: 2283290754848967599}
   - component: {fileID: 8028182382898721339}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
