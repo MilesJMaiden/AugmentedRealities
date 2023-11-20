@@ -51,6 +51,9 @@ MonoBehaviour:
   - Prefab: {fileID: 4025537716497158586, guid: 6f3bf0e0ded501443a23c37d0a6bf934, type: 3}
     ClassificationLabel: GLOBAL_MESH
     _editorClassificationIndex: 16
+  - Prefab: {fileID: 102490448831091297, guid: 236aa76ef7c9f8b4996f65102627cb69, type: 3}
+    ClassificationLabel: FLOOR
+    _editorClassificationIndex: 0
   ActiveRoomsOnly: 1
   VerboseLogging: 0
   MaxSceneAnchorUpdatesPerFrame: 3
