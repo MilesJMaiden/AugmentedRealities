@@ -5087,7 +5087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5581714655719024800}
   m_Layer: 0
-  m_Name: PlayerOculusInteractionRig
+  m_Name: OVRPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6654,7 +6654,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: m_Name
-      value: PlayerOVRCameraRig
+      value: OVRPlayerCameraRig
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: m_LocalPosition.x
