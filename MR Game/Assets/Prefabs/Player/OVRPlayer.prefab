@@ -6664,6 +6664,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: OVRPlayerCameraRig
       objectReference: {fileID: 0}
+    - target: {fileID: 109308, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 113768, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6704,10 +6712,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2037080, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010189485334, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012175207052, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967263
+      objectReference: {fileID: 0}
     - target: {fileID: 826749761187356340, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1096645913974449699, guid: 392c7ca7858a040479204d548954e8c8, type: 3}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1096645913974449699, guid: cb41ecd8143dc134197ac250412d41a7, type: 3}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1096645913974449699, guid: 51126c9c80ba39b4e91a27078ff57c63, type: 3}
     - target: {fileID: 6641875318614724296, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6747,15 +6783,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8000001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6976,17 +7012,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerControllerRayInteractor
       objectReference: {fileID: 0}
+    - target: {fileID: 2519953544252300544, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8000001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2519953544252300547, guid: 6b60ca1df3667e04fa2300f46f9781af, type: 3}
       propertyPath: m_LocalRotation.w

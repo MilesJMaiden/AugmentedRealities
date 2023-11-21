@@ -211,7 +211,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33b7eb9fdf580a748b2275e91fb74a52, type: 2}
+  - {fileID: 2100000, guid: 6836a5ed4b22ce74ba10a52b782fb6ae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1126,7 +1126,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 184659223c9148d4a9db10b98080e498, type: 2}
+  - {fileID: 2100000, guid: 85856f3da2081474d8ee6be2bb692fea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1265,7 +1265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709162549633769954}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Fire Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
