@@ -5,69 +5,83 @@ using UnityEngine;
 public class FireProjectile : MonoBehaviour
 {
     public GameObject[] projectilePrefabs; // Array to hold different projectile prefabs
-    public GameObject[] weaponModels; // Array to hold different weapon models
+    public GameObject[] weaponModels; // Array to hold different weapon model prefabs
+    private GameObject currentWeapon; // Current weapon GameObject
+    public GameObject weaponAnchorPoint; // Anchor point for instantiating weapons
     private int currentWeaponIndex = 0; // Current weapon index
-    private float lastButtonPressTime = 0f; // Time of the last primary button press
+    private float lastKeyPressTime = 0f; // Time of the last Q key press
     public float doubleTapTime = 0.5f; // Time interval to detect double tap
     public float startingVelocity = 12f;
 
-    private enum WeaponType
-    {
-        Blue, // Water
-        Red,  // Fire
-        Green // Grass
-    }
-
     void Start()
     {
-        // Initialize the weapon models (activate the first, deactivate others)
-        foreach (GameObject model in weaponModels)
-        {
-            model.SetActive(false);
-        }
-        weaponModels[currentWeaponIndex].SetActive(true);
+        // Instantiate the first weapon at the start
+        currentWeapon = Instantiate(weaponModels[currentWeaponIndex], weaponAnchorPoint.transform.position, weaponAnchorPoint.transform.rotation);
+        currentWeapon.transform.SetParent(weaponAnchorPoint.transform, worldPositionStays: false);
     }
 
     void Update()
     {
         HandleWeaponSwitch();
         HandleShooting();
+
+        // Debug controls
+        HandleDebugInput();
     }
 
     void HandleWeaponSwitch()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One))
+        if (OVRInput.GetDown(OVRInput.Button.One) || (Input.GetKeyDown(KeyCode.Q) && Time.time - lastKeyPressTime < doubleTapTime))
         {
-            if (Time.time - lastButtonPressTime < doubleTapTime)
-            {
-                // Double tapped, switch weapon
-                SwitchWeapon();
-            }
-            lastButtonPressTime = Time.time;
+            // Double tapped, switch weapon and projectile
+            SwitchWeaponAndProjectile();
+            lastKeyPressTime = Time.time;
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            lastKeyPressTime = Time.time;
         }
     }
 
-    void SwitchWeapon()
+    void SwitchWeaponAndProjectile()
     {
-        // Deactivate the current weapon model
-        weaponModels[currentWeaponIndex].SetActive(false);
+        // Destroy the current weapon model
+        if (currentWeapon != null)
+        {
+            Destroy(currentWeapon);
+        }
 
-        // Switch to the next weapon
-        currentWeaponIndex = (currentWeaponIndex + 1) % projectilePrefabs.Length;
+        // Switch to the next weapon and projectile
+        currentWeaponIndex = (currentWeaponIndex + 1) % weaponModels.Length;
 
-        // Activate the new weapon model
-        weaponModels[currentWeaponIndex].SetActive(true);
+        // Instantiate the new weapon model at the anchor point
+        currentWeapon = Instantiate(weaponModels[currentWeaponIndex], weaponAnchorPoint.transform.position, weaponAnchorPoint.transform.rotation);
+        currentWeapon.transform.SetParent(weaponAnchorPoint.transform, worldPositionStays: false);
     }
 
     void HandleShooting()
     {
-        //Secondary = righthand
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetMouseButtonDown(0))
         {
             GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
             GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            Rigidbody projectilRB = projectile.GetComponent<Rigidbody>();
-            projectilRB.velocity = transform.forward * startingVelocity;
+
+            // Search for Rigidbody in the children of the projectile
+            Rigidbody projectileRB = projectile.GetComponentInChildren<Rigidbody>();
+
+            if (projectileRB != null)
+            {
+                projectileRB.velocity = transform.forward * startingVelocity;
+            }
+            else
+            {
+                Debug.LogWarning("Rigidbody not found in the children of the projectile prefab.");
+            }
         }
+    }
+
+    void HandleDebugInput()
+    {
+        // Add any additional keyboard/mouse debug controls here if needed
     }
 }
