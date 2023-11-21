@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 4355930975340026637}
   - component: {fileID: 6235136362245672977}
   - component: {fileID: 6490652217138339505}
-  - component: {fileID: 1798673403859678777}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Untagged
@@ -2307,28 +2306,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2963821218480417182}
   m_Mesh: {fileID: 0}
---- !u!64 &1798673403859678777
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2963821218480417182}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3131420856558876273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,7 +2319,6 @@ GameObject:
   - component: {fileID: 4917715234024902530}
   - component: {fileID: 6743672688393646379}
   - component: {fileID: 2047350426195038861}
-  - component: {fileID: 7733901485950328708}
   m_Layer: 0
   m_Name: trim
   m_TagString: Untagged
@@ -3147,28 +3123,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3131420856558876273}
   m_Mesh: {fileID: 0}
---- !u!64 &7733901485950328708
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3131420856558876273}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &4364709557912298711
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,7 +3168,6 @@ GameObject:
   - component: {fileID: 229450991290877806}
   - component: {fileID: 5175239510672363228}
   - component: {fileID: 3424860571777406050}
-  - component: {fileID: 876828350955644490}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -4019,28 +3972,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388009253938411457}
   m_Mesh: {fileID: 0}
---- !u!64 &876828350955644490
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388009253938411457}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &4666814860866546845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4054,7 +3985,6 @@ GameObject:
   - component: {fileID: 2154033974913103066}
   - component: {fileID: 8489722694474373712}
   - component: {fileID: 6753266184529945369}
-  - component: {fileID: 8923593978132728129}
   m_Layer: 0
   m_Name: trim
   m_TagString: Untagged
@@ -4858,28 +4788,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4666814860866546845}
-  m_Mesh: {fileID: 0}
---- !u!64 &8923593978132728129
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4666814860866546845}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &6130190548085750668
 GameObject:
