@@ -11,6 +11,9 @@ public class ProjectileCollision : MonoBehaviour
         if (hasCollided) return; // Prevent multiple collision handling
         hasCollided = true;
 
+        // Get the name of the projectile
+        string projectileName = gameObject.name;
+
         // Instantiate the particle effect at the collision point
         if (particleEffectPrefab != null)
         {
@@ -22,6 +25,9 @@ public class ProjectileCollision : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(collisionSound, collision.contacts[0].point);
         }
+
+        // Log the projectile name, the object it hit, and the collision position
+        Debug.Log(projectileName + " Projectile has collided with " + collision.gameObject.name + " at position " + collision.contacts[0].point);
 
         // Disable the Mesh Renderer to make the projectile invisible
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
@@ -35,7 +41,15 @@ public class ProjectileCollision : MonoBehaviour
         Rigidbody rb = GetComponent<Rigidbody>();
         if (rb != null) rb.isKinematic = true;
 
-        // Destroy the projectile GameObject after a delay
-        Destroy(gameObject, collisionSound != null ? collisionSound.length : 0f);
+        // Destroy the parent GameObject
+        if (transform.parent != null)
+        {
+            Destroy(transform.parent.gameObject, collisionSound != null ? collisionSound.length : 0f);
+        }
+        else
+        {
+            // If no parent, just destroy the projectile
+            Destroy(gameObject, collisionSound != null ? collisionSound.length : 0f);
+        }
     }
 }

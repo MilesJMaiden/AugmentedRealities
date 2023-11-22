@@ -55,9 +55,11 @@ public class FireProjectile : MonoBehaviour
         // Switch to the next weapon and projectile
         currentWeaponIndex = (currentWeaponIndex + 1) % weaponModels.Length;
 
-        // Instantiate the new weapon model at the anchor point
+        // Instantiate the new weapon model at the anchor point's position
         currentWeapon = Instantiate(weaponModels[currentWeaponIndex], weaponAnchorPoint.transform.position, weaponAnchorPoint.transform.rotation);
-        currentWeapon.transform.SetParent(weaponAnchorPoint.transform, worldPositionStays: false);
+
+        // Set the parent of the weapon to the anchor point
+        currentWeapon.transform.SetParent(weaponAnchorPoint.transform);
     }
 
     void HandleShooting()
