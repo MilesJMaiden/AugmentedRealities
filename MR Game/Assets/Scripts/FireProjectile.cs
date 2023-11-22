@@ -8,6 +8,7 @@ public class FireProjectile : MonoBehaviour
     public GameObject[] weaponModels; // Array to hold different weapon model prefabs
     private GameObject currentWeapon; // Current weapon GameObject
     public GameObject weaponAnchorPoint; // Anchor point for instantiating weapons
+    public Transform projectileSpawnPoint; // Transform of the spawn point for projectiles
     private int currentWeaponIndex = 0; // Current weapon index
     private float lastKeyPressTime = 0f; // Time of the last Q key press
     public float doubleTapTime = 0.5f; // Time interval to detect double tap
@@ -64,14 +65,15 @@ public class FireProjectile : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger) || Input.GetMouseButtonDown(0))
         {
             GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            // Instantiate the projectile at the spawn point position and rotation
+            GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
 
             // Search for Rigidbody in the children of the projectile
             Rigidbody projectileRB = projectile.GetComponentInChildren<Rigidbody>();
 
             if (projectileRB != null)
             {
-                projectileRB.velocity = transform.forward * startingVelocity;
+                projectileRB.velocity = projectileSpawnPoint.forward * startingVelocity;
             }
             else
             {
