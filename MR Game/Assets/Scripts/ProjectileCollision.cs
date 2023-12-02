@@ -18,6 +18,9 @@ public class ProjectileCollision : MonoBehaviour
     [Tooltip("Time in seconds for the decal to fade out.")]
     public float decalFadeOutTime = 5.0f;
 
+    [Tooltip("Color of the decal based on the projectile type.")]
+    public Color decalColor;
+
     // Counter for the number of collisions
     private int collisionCount = 0;
 
@@ -81,11 +84,15 @@ public class ProjectileCollision : MonoBehaviour
 
     private void CreateDecal(Vector3 position, Vector3 normal)
     {
-        // Instantiate the decal prefab at the collision point with correct orientation
         if (decalPrefab != null)
         {
             GameObject decal = Instantiate(decalPrefab, position, Quaternion.LookRotation(normal));
-            // Start the fade out coroutine on the decal
+            Renderer decalRenderer = decal.GetComponent<Renderer>();
+            if (decalRenderer != null)
+            {
+                decalRenderer.material.color = decalColor; // Set the decal color
+            }
+
             ProjectileDecal projectileDecal = decal.GetComponent<ProjectileDecal>();
             if (projectileDecal != null)
             {

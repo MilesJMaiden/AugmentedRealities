@@ -6707,15 +6707,63 @@ PrefabInstance:
     - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: weaponModels.Array.data[0]
       value: 
-      objectReference: {fileID: 121110037489413285, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      objectReference: {fileID: 942857943160797479, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
     - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: weaponModels.Array.data[1]
       value: 
-      objectReference: {fileID: 942857943160797479, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      objectReference: {fileID: 3381632159500020074, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
     - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: weaponModels.Array.data[2]
       value: 
-      objectReference: {fileID: 3381632159500020074, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      objectReference: {fileID: 121110037489413285, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1096645913974449699, guid: cb41ecd8143dc134197ac250412d41a7, type: 3}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1096645913974449699, guid: 51126c9c80ba39b4e91a27078ff57c63, type: 3}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectilePrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1096645913974449699, guid: 392c7ca7858a040479204d548954e8c8, type: 3}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[0].a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[0].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[0].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[1].a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[2].a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328496256634312978, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
+      propertyPath: projectileColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7386519678315953809, guid: 648d5b28e56ea7a43a74277b4ff6eec7, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.06

@@ -182,8 +182,9 @@ MonoBehaviour:
   particleEffectPrefab: {fileID: 0}
   collisionSound: {fileID: 8300000, guid: 9a752d3328516a44384df0f171c8a5ca, type: 3}
   maxCollisions: 3
-  decalPrefab: {fileID: 0}
+  decalPrefab: {fileID: 1900755009760761842, guid: edaedbe9a92d3ef4b91e5589954bfa07, type: 3}
   decalFadeOutTime: 5
+  decalColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2712404136760322584
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class FireProjectile : MonoBehaviour
 {
     public GameObject[] projectilePrefabs; // Array to hold different projectile prefabs
     public GameObject[] weaponModels; // Array to hold different weapon model prefabs
+    public Color[] projectileColors;
     private GameObject currentWeapon; // Current weapon GameObject
     public GameObject weaponAnchorPoint; // Anchor point for instantiating weapons
     public Transform projectileSpawnPoint; // Transform of the spawn point for projectiles
@@ -69,6 +70,13 @@ public class FireProjectile : MonoBehaviour
             GameObject projectilePrefab = projectilePrefabs[currentWeaponIndex];
             // Instantiate the projectile at the spawn point position and rotation
             GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+
+            // Pass the color information to the projectile
+            ProjectileCollision projectileCollision = projectile.GetComponent<ProjectileCollision>();
+            if (projectileCollision != null)
+            {
+                projectileCollision.decalColor = projectileColors[currentWeaponIndex]; // Set color based on weapon type
+            }
 
             // Search for Rigidbody in the children of the projectile
             Rigidbody projectileRB = projectile.GetComponentInChildren<Rigidbody>();
