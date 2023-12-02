@@ -1,4 +1,4 @@
-Shader "Meta/Depth/BiRP/myShader2"
+Shader "Meta/Depth/BiRP/FresnelShader"
 {
     Properties
     {
