@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8448917163764284653}
   m_Layer: 0
-  m_Name: GrassProjectile
-  m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Name: EnemyProjectile
+  m_TagString: EnemyProjectile
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -46,9 +46,9 @@ GameObject:
   - component: {fileID: 8922237644527571889}
   - component: {fileID: 639092341791983404}
   - component: {fileID: 5222098334958731180}
-  - component: {fileID: 8283824531941048168}
+  - component: {fileID: 6770844235407480888}
   m_Layer: 0
-  m_Name: GrassProjectile
+  m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d191d169c8a99dc42b9bcf4f66aa0b2d, type: 2}
+  - {fileID: 2100000, guid: 09c72c20241fde949953d58c92071ffb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,7 +167,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &8283824531941048168
+--- !u!114 &6770844235407480888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
