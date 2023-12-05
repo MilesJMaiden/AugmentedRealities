@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8448917163764284653}
   m_Layer: 0
   m_Name: GrassProjectile
-  m_TagString: Untagged
+  m_TagString: GrassProjectile
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 8283824531941048168}
   m_Layer: 0
   m_Name: GrassProjectile
-  m_TagString: Untagged
+  m_TagString: GrassProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 5099041239099183362}
   m_Layer: 6
   m_Name: MR_BlobShadowTEX
-  m_TagString: Untagged
+  m_TagString: GrassProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

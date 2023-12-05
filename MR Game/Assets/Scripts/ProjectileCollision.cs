@@ -59,8 +59,8 @@ public class ProjectileCollision : MonoBehaviour
     private bool IsEnemy(GameObject obj)
     {
         // Check if the object has any of the enemy tags
-        return obj.CompareTag("Enemy") || obj.CompareTag("Red Enemy") ||
-               obj.CompareTag("Green Enemy") || obj.CompareTag("Blue Enemy");
+        return obj.CompareTag("Enemy") || obj.CompareTag("FireEnemy") ||
+               obj.CompareTag("GrassEnemy") || obj.CompareTag("WaterEnemy");
     }
 
     private void HandleDestruction(Vector3 collisionPoint)

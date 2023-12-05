@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 6770844235407480888}
   m_Layer: 0
   m_Name: EnemyProjectile
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 5099041239099183362}
   m_Layer: 6
   m_Name: MR_BlobShadowTEX
-  m_TagString: Untagged
+  m_TagString: EnemyProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

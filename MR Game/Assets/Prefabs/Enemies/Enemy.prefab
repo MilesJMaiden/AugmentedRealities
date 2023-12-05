@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 3896080276433842598}
   m_Layer: 0
   m_Name: LowManRightHandThumb1_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 806814053553229387}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 6761380131521834250}
   m_Layer: 0
   m_Name: arm_l
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 1794514732801531892}
   m_Layer: 0
   m_Name: LowManSpine1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -546,7 +546,7 @@ GameObject:
   - component: {fileID: 5576094514421164183}
   m_Layer: 0
   m_Name: LowManRightHandMiddle2_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 9157509763894044712}
   m_Layer: 0
   m_Name: LowManRightHand
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 8376006435260712432}
   m_Layer: 0
   m_Name: LowManHead
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 5508852942227184753}
   m_Layer: 0
   m_Name: LowManHead_end
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -982,7 +982,7 @@ GameObject:
   - component: {fileID: 3280820464057169349}
   m_Layer: 0
   m_Name: LowManLeftLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,7 +1124,7 @@ GameObject:
   - component: {fileID: 5963483137522123743}
   m_Layer: 0
   m_Name: LowManRightShoulder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 8105018731386618754}
   m_Layer: 0
   m_Name: LowManSpine2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 6979856283356413643}
   m_Layer: 0
   m_Name: LowManLeftUpLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 7783219906761366769}
   m_Layer: 0
   m_Name: leg_r
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 1755814614427686026}
   m_Layer: 0
   m_Name: LowManLeftArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,7 +1597,7 @@ GameObject:
   - component: {fileID: 7237903633106055715}
   m_Layer: 0
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 4697603512331716597}
   m_Layer: 0
   m_Name: LowManSkeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1742,7 +1742,7 @@ GameObject:
   - component: {fileID: 1655172862793647790}
   m_Layer: 0
   m_Name: LowManRightHandThumb1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1774,7 +1774,7 @@ GameObject:
   - component: {fileID: 1630664380507989114}
   m_Layer: 0
   m_Name: LowManLeftShoulder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 1645355801883331781}
   m_Layer: 0
   m_Name: LowManHips
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1969,7 +1969,7 @@ GameObject:
   - component: {fileID: 4957495756319093566}
   m_Layer: 0
   m_Name: LowManRightHandMiddle1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 5787415666175680965}
   m_Layer: 0
   m_Name: LowManRightUpLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2180,7 +2180,7 @@ GameObject:
   - component: {fileID: 1457711213865172687}
   m_Layer: 0
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2293,7 +2293,7 @@ GameObject:
   - component: {fileID: 2516463932592848006}
   m_Layer: 0
   m_Name: LowManRightHandMiddle2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2391,7 +2391,7 @@ GameObject:
   - component: {fileID: 1951372201353288754}
   m_Layer: 0
   m_Name: LowManRightArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2537,7 +2537,7 @@ GameObject:
   - component: {fileID: 4535718326472044450}
   m_Layer: 0
   m_Name: LowManRightForeArm
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2680,7 +2680,7 @@ GameObject:
   - component: {fileID: 4990718796415614815}
   m_Layer: 0
   m_Name: arm_r
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2793,7 +2793,7 @@ GameObject:
   - component: {fileID: 2788296114009147061}
   m_Layer: 0
   m_Name: LowManNeck
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2829,7 +2829,7 @@ GameObject:
   - component: {fileID: 3962258222430098523}
   m_Layer: 0
   m_Name: LowManRightLeg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3003,7 +3003,7 @@ GameObject:
   - component: {fileID: 53876549371537734}
   m_Layer: 0
   m_Name: leg_l
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3116,7 +3116,7 @@ GameObject:
   - component: {fileID: 6463557259443470199}
   m_Layer: 0
   m_Name: LowManSpine
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
