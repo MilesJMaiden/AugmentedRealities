@@ -3,7 +3,17 @@ guid: e424bdcd3baca0a4a877b152cadedf6a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 4987a147e31e8044ea7e0762e6f1780a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MazeLowMan.001
+    second: {fileID: 2100000, guid: 4987a147e31e8044ea7e0762e6f1780a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
