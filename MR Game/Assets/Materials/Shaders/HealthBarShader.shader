@@ -93,8 +93,8 @@ Shader "Meta/Depth/BiRP/HealthBarShader"
                 half4 colorFromUV = half4(input.uv0,0,1); //creates a colour from the UV0 coordinates
                 half redComponent = input.uv0.x;
                 half4 finalColor = half4(oneMinus(redComponent), 0, 0, 1);
-
-
+                float2 texCoord = float2(input.uv0.x,input.uv0.y);
+                finalColor = tex2D(_MainTex, texCoord);
 
                 finalColor.a *= step(_AlphaClipThreshold, finalColor.a); //Alpha clipping
                 META_DEPTH_OCCLUDE_OUTPUT_PREMULTIPLY(input, finalColor, 1);
