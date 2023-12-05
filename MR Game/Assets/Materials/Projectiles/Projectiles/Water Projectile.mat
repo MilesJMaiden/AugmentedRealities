@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water Projectile
-  m_Shader: {fileID: 4800000, guid: 2221ee746b40d6148990630d2f8d9c5b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 169fc975cf8aef34c9766b148148f547, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -79,6 +79,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.11764704, g: 0.37254906, b: 0.7058824, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
