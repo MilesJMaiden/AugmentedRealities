@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 5222098334958731180}
   - component: {fileID: 6770844235407480888}
   m_Layer: 0
-  m_Name: WaterProjectile
+  m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a3c41b1b4e53c734abebe77f82e6159f, type: 2}
+  - {fileID: 2100000, guid: 09c72c20241fde949953d58c92071ffb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
