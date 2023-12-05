@@ -8,6 +8,8 @@ TagManager:
   - Fire Enemy
   - Water Enemy
   - Grass Enemy
+  - EnemyProjectile
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -1,42 +1,40 @@
 using UnityEngine;
 using System.Collections;
-using System.Linq;//LINQ 用于将游戏对象的子对象转换为游戏对象数组
+using System.Linq;
 
 public class Shield : MonoBehaviour
 {
-    private GameObject[] shieldParts;
-    private int hitCount = 0;//被打多少次——————————————————这里有可能是public
+    public string projectileTag = "Projectile"; // Tag to identify projectiles
+    public GameObject[] shieldParts; // Publicly referenced shield parts
+    public float rechargeTime = 10.0f; // Time to recharge the shield
+
+    private int hitCount = 0;
     private IEnumerator currentCoroutine;
-    //private IEnumerator currentCoroutine;是一个名为 的私有变量的声明currentCoroutine。该变量的类型为IEnumerator，它是 Unity 中用于创建协程的接口。
-
-
-
-    //step1: setactive all parts 
 
     void Start()
     {
-        // Automatically find and assign the shield parts
-        shieldParts = transform.Cast<Transform>().Select(t => t.gameObject).ToArray();  // ToArray()把四个parts放进数组
-        //LINQ is used to transform the children of a GameObject into an array of GameObjects. This is done using the Select method in combination with the ToArray method:
-
+        // Assuming shieldParts are already assigned in the inspector
         // Initialize all parts as active
-        foreach (var part in shieldParts)
+        ResetShield();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag(projectileTag))
         {
-            part.SetActive(true);
+            TakeHit();
         }
     }
 
-
-    //step2:  
     public void TakeHit()
     {
-
-        //修改这里enemy的攻击次数，所以差一个攻击后的判断，在enemy攻击后currentHitCount = hitcount+1
-
         hitCount++;
-
-        // 每两下攻击减少一个part,在这里是<2时，最后要重新回到0
-        if (hitCount % 2 == 0)
+        if (hitCount >= shieldParts.Length)
+        {
+            DisableShield();
+            hitCount = 0; // Reset hit count after all parts are disabled
+        }
+        else
         {
             DisableNextShieldPart();
         }
@@ -46,17 +44,13 @@ public class Shield : MonoBehaviour
         {
             StopCoroutine(currentCoroutine);
         }
-        currentCoroutine = ReEnableShieldPart();
+        currentCoroutine = ReEnableShield();
         StartCoroutine(currentCoroutine);
     }
 
-
-
-
-    //function 1 ，--------------vfx也在加在这里！！
     private void DisableNextShieldPart()
     {
-        foreach (var part in shieldParts)// 主要用在类似collection这样，对象的次序不是很重要的时候
+        foreach (var part in shieldParts)
         {
             if (part.activeSelf)
             {
@@ -66,21 +60,25 @@ public class Shield : MonoBehaviour
         }
     }
 
-
-    //倒计时
-    private IEnumerator ReEnableShieldPart()
+    private IEnumerator ReEnableShield()
     {
-        yield return new WaitForSeconds(5);//yield return：在这里的作用和for配合，for第一次执行完后继续倒计时五秒
+        yield return new WaitForSeconds(rechargeTime);
+        ResetShield();
+    }
 
-        for (int i = shieldParts.Length - 1; i >= 0; i--)
+    private void ResetShield()
+    {
+        foreach (var part in shieldParts)
         {
-            if (!shieldParts[i].activeSelf)
-            {
-                shieldParts[i].SetActive(true);
-                break;
-            }
+            part.SetActive(true);
         }
+    }
 
-        hitCount = 0; // Reset hit count after re-enabling a part，可要可不要，连招的时候可以不要
+    private void DisableShield()
+    {
+        foreach (var part in shieldParts)
+        {
+            part.SetActive(false);
+        }
     }
 }
