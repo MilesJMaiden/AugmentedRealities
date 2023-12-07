@@ -1,4 +1,4 @@
-Shader "Meta/Depth/BiRP/myShader2"
+Shader "Meta/Depth/BiRP/FresnelShader"
 {
     Properties
     {
@@ -45,7 +45,7 @@ Shader "Meta/Depth/BiRP/myShader2"
                 // 3. This macro adds required data field to the varyings struct
                 //    The number has to be filled with the recent TEXCOORD number + 1
                 //    Or 0 as in this case, if there are no other TEXCOORD fields
-                META_DEPTH_VERTEX_OUTPUT(0)
+                META_DEPTH_VERTEX_OUTPUT(2)
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
                 // 4. The fragment shader needs to understand to which eye it's currently
