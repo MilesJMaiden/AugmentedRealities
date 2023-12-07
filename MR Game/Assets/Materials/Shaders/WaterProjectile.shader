@@ -1,15 +1,13 @@
-Shader "Meta/Depth/BiRP/myShader2"
+Shader "Meta/Depth/BiRP/WaterProjectile"
 {
     Properties
     {
         [MainColor] _BaseColor("Base Color", Color) = (1, 1, 1, 1)
+        _fresnelIntensity ("Fresnel Intensity", Float) = 0
     }
-
-    SubShader
+   SubShader
     {
-        Tags { "RenderType" = "Opaque" }
-
-        // 0. It's important to have One OneMinusSrcAlpha so it blends properly against transparent background (passthrough)
+        Tags{ "RenderType"="Transparent" "Queue"="Transparent"}
         Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha
 
         Pass
@@ -55,6 +53,7 @@ Shader "Meta/Depth/BiRP/myShader2"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _BaseColor;
+                float _fresnelIntensity;
             CBUFFER_END
 
             Varyings vert(Attributes input)
@@ -93,8 +92,8 @@ Shader "Meta/Depth/BiRP/myShader2"
                 half3 camdirection = getCameraDirection(input.positionWS);
                 half4 colorFromUV = half4(input.uv0,0,1); //creates a colour from the UV0 coordinates
                 half4 finalColor = _BaseColor;
-                half fresnelNum = fresnel(input.worldNormal,camdirection);
-                half4 fresnelO = half4(fresnelNum,fresnelNum,fresnelNum,1);
+                half fresnelNum = fresnel(input.worldNormal,camdirection) + _fresnelIntensity;
+                half4 fresnelAlpha = half4(1,1,1,fresnelNum);
 
 
                 // 8. A third macro required to enable occlusions.
@@ -105,7 +104,7 @@ Shader "Meta/Depth/BiRP/myShader2"
                 //    Fully occluded pixels will be discarded
                 META_DEPTH_OCCLUDE_OUTPUT_PREMULTIPLY(input, finalColor, fresnelNum);
 
-                return fresnelO*_BaseColor;
+                return _BaseColor*fresnelAlpha;
             }
             ENDCG
         }
