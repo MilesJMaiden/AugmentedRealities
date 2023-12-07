@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 22cc3371c64f47d44a2528e2594b4822
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 22200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -55,6 +55,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Gray8
     second: {fileID: 2100000, guid: 9439c5503f0742e41846c83e8ee638d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh1_Group2_Group1_ModelMat
+    second: {fileID: 2100000, guid: 46a4928616688c54a859694282298a4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesh2_Group3_Group1_ModelMat
+    second: {fileID: 2100000, guid: e60a6b582320db246a9c2fc4f9f2ca0d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -91,6 +101,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -118,6 +129,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -150,6 +162,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 

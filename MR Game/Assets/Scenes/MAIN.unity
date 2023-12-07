@@ -3302,41 +3302,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 275993884778161122, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 469262457958858911, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 701035503702218561, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
     - target: {fileID: 2043435867877512488, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
       propertyPath: m_Name
       value: WaterEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3672981521992508281, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766443447656802057, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 4012177791065671063, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5289945757957516476, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5340997771691030282, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
       objectReference: {fileID: 0}
     - target: {fileID: 5445279375904867459, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
       propertyPath: playerHead
@@ -3346,14 +3314,6 @@ PrefabInstance:
       propertyPath: playerTarget
       value: 
       objectReference: {fileID: 563097594}
-    - target: {fileID: 6090215461954651610, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 6929673663797884672, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
-      objectReference: {fileID: 0}
     - target: {fileID: 7348549284608665210, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.25
@@ -3393,10 +3353,6 @@ PrefabInstance:
     - target: {fileID: 7348549284608665210, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8660408858284711057, guid: 7f3d0e9d4af1e6e4199e443f024f920f, type: 3}
-      propertyPath: targetTag
-      value: GrassProjectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
