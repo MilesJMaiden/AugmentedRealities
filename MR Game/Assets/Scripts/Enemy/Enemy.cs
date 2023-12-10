@@ -7,13 +7,13 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public FireBulletOnActivate gun;
-
     private NavMeshAgent agent;
     private Animator animator;
     public Transform playerHead;
     public Transform playerTarget;
 
     public float stopDistance = 6f;
+    public float health = 100f; 
 
     private Quaternion localRotationGun;
 
@@ -43,8 +43,8 @@ public class Enemy : MonoBehaviour
     public void ThrowGun()
     {
         gun.bulletOrigin.localRotation = localRotationGun;
-
         gun.transform.parent = null;
+
         //Maths Physics Method
         Rigidbody rb = gun.GetComponent<Rigidbody>();
         rb.velocity = BallisticVelocityVector(gun.transform.position, playerHead.position, 45f);
@@ -82,6 +82,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void TakeDamage(float damage, Vector3 hitPosition)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Dead(hitPosition); 
+        }
+    }
+
     public void Dead(Vector3 hitPosition)
     {
         //loop through all limbs
@@ -102,11 +111,9 @@ public class Enemy : MonoBehaviour
             }
         }
 
-
         ThrowGun();
         animator.enabled= false;
         agent.enabled= false;
-        this.enabled= false;
-
+        Destroy(this, 5f);
     }
 }
