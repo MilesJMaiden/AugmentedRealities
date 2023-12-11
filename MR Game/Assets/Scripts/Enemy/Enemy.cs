@@ -7,8 +7,8 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public FireBulletOnActivate gun;
-    private NavMeshAgent agent;
-    private Animator animator;
+    public NavMeshAgent agent;
+    public Animator animator;
     public Transform playerHead;
     public Transform playerTarget;
 
@@ -17,27 +17,62 @@ public class Enemy : MonoBehaviour
 
     private Quaternion localRotationGun;
 
-    // Start is called before the first frame update
+    private GameManager gameManager;
+
+    void Awake()
+    {
+        // Find the OVRPlayer GameObject
+        GameObject playerGameObject = GameObject.Find("OVRPlayer");
+        if (playerGameObject != null)
+        {
+            playerTarget = playerGameObject.transform;
+
+            // Find the OVRPlayerCameraRig as a child of OVRPlayer
+            Transform cameraRigTransform = playerGameObject.transform.Find("OVRPlayerCameraRig");
+            if (cameraRigTransform != null)
+            {
+                // Assign the camera rig itself as the player head
+                playerHead = cameraRigTransform;
+
+                // If additional confirmation is needed, log a message
+                Debug.Log("OVRPlayerCameraRig assigned as player head");
+            }
+            else
+            {
+                Debug.LogError("OVRPlayerCameraRig not found as a child of OVRPlayer");
+            }
+        }
+        else
+        {
+            Debug.LogError("OVRPlayer not found in the scene");
+        }
+    }
+
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>(); 
         SetupRagdoll();
 
         localRotationGun = gun.bulletOrigin.transform.localRotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(playerTarget.position);
-
-        float distance = Vector3.Distance(playerTarget.position, transform.position);  
-        if (distance < stopDistance)
+        if (agent != null && agent.isActiveAndEnabled)
         {
-            agent.isStopped = true;
-            animator.SetBool("Shoot", true);
+            agent.SetDestination(playerTarget.position);
+
+            float distance = Vector3.Distance(playerTarget.position, transform.position);
+            if (distance < stopDistance)
+            {
+                agent.isStopped = true;
+                animator.SetBool("Shoot", true);
+            }
         }
+    }
+
+    public void SetGameManager(GameManager manager)
+    {
+        gameManager = manager;
     }
 
     public void ThrowGun()
@@ -111,9 +146,14 @@ public class Enemy : MonoBehaviour
             }
         }
 
+        if (gameManager != null)
+        {
+            gameManager.EnemyKilled(gameObject);
+        }
+
         ThrowGun();
-        animator.enabled= false;
-        agent.enabled= false;
+        animator.enabled = false;
+        agent.enabled = false;
         Destroy(this, 5f);
     }
 }

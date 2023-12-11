@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
     private Transform playerTransform;
+    private Transform enemiesParent;
     public GameObject[] enemyPrefabs;
     public float maxSpawnDistance = 20f;
     public float minEnemyDistance = 5f;
@@ -29,6 +31,14 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("OVRPlayer not found in the scene.");
         }
+
+        // Find or create the 'Enemies' parent object
+        GameObject enemiesParentObj = GameObject.Find("Enemies");
+        if (enemiesParentObj == null)
+        {
+            enemiesParentObj = new GameObject("Enemies");
+        }
+        enemiesParent = enemiesParentObj.transform;
     }
 
     void Start()
@@ -63,9 +73,21 @@ public class GameManager : MonoBehaviour
             }
             while (!ValidSpawnPoint(spawnPoint));
 
-            GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-            GameObject enemy = Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
-            spawnedEnemies.Add(enemy);
+            // Find a point on the NavMesh near the calculated spawnPoint
+            if (NavMesh.SamplePosition(spawnPoint, out NavMeshHit hit, maxSpawnDistance, NavMesh.AllAreas))
+            {
+                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+                GameObject enemy = Instantiate(enemyPrefab, hit.position, Quaternion.identity, enemiesParent);
+
+                // Set the GameManager reference in the enemy's script
+                Enemy enemyScript = enemy.GetComponent<Enemy>();
+                if (enemyScript != null)
+                {
+                    enemyScript.SetGameManager(this);
+                }
+
+                spawnedEnemies.Add(enemy);
+            }
         }
     }
 

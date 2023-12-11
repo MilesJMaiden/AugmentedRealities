@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &1538257559953074886
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &2043435867877512488
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,9 +674,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 4276505490764511014}
+  agent: {fileID: 6637460724322747397}
+  animator: {fileID: 1938281140192310988}
   playerHead: {fileID: 0}
   playerTarget: {fileID: 0}
   stopDistance: 5
+  health: 100
 --- !u!195 &6637460724322747397
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -843,6 +848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &2141193334047103850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &3128144533450040963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,6 +1271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &4100257993936990325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &4190479898072676607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &4814407886013530988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +1966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &5494160648112549271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &5704935327957575082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2476,6 +2488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &6234426113766390231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: GrassProjectile
   enemy: {fileID: 5445279375904867459}
+  baseDamage: 25
 --- !u!1 &7831348186949037733
 GameObject:
   m_ObjectHideFlags: 0

@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &977280387688753108
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &1501268251050943813
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,9 +499,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 3348008939113037502}
+  agent: {fileID: 3488401289607630278}
+  animator: {fileID: 6462906056009326312}
   playerHead: {fileID: 0}
   playerTarget: {fileID: 0}
   stopDistance: 5
+  health: 100
 --- !u!195 &3488401289607630278
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -780,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &2515480075890029918
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &3058976732803003080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &4085829668507905333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &4133654813917347902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,6 +2047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &6414708072026759975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,6 +2372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &7063048969777958347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,6 +2645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &8060697375979590951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,6 +2971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &8564895639678085955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,6 +3118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: WaterProjectile
   enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &8765281719658665286
 GameObject:
   m_ObjectHideFlags: 0
