@@ -128,6 +128,11 @@ public class Enemy : MonoBehaviour
 
     public void Dead(Vector3 hitPosition)
     {
+
+        // Add a check to ensure the enemy is not already destroyed
+        if (this == null)
+            return;
+
         //loop through all limbs
         foreach (var item in GetComponentsInChildren<Rigidbody>())
         {
@@ -154,6 +159,18 @@ public class Enemy : MonoBehaviour
         ThrowGun();
         animator.enabled = false;
         agent.enabled = false;
-        Destroy(this, 5f);
+
+        // Safely destroy the enemy
+        SafeDestruction();
+
+    }
+
+    public void SafeDestruction()
+    {
+        // Stop all coroutines or any ongoing operations
+        StopAllCoroutines();
+
+        // Finally, destroy the object
+        Destroy(gameObject);
     }
 }

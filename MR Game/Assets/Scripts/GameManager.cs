@@ -49,12 +49,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         roundTimer -= Time.deltaTime;
-        if (roundTimer <= 0)
+        if (roundTimer <= 0 && spawnedEnemies.Count > 0)
         {
             GameOver();
         }
 
-        if (spawnedEnemies.Count == 0)
+        if (spawnedEnemies.Count == 0 && roundTimer > 0)
         {
             StartNextRound();
         }
@@ -122,9 +122,25 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game over. Restarting in 10 seconds...");
+
+        // Cancel any pending invocations to prevent double calls
+        CancelInvoke(nameof(StartRound));
+        CancelInvoke(nameof(StartNextRound));
+
+        // Destroy all active enemies
+        foreach (GameObject enemy in spawnedEnemies)
+        {
+            if (enemy != null)
+            {
+                Destroy(enemy);
+            }
+        }
+        spawnedEnemies.Clear();
+
         score = 0;
         currentRound = 1;
-        // Restart logic goes here...
+
+        // Restart the round after a delay
         Invoke(nameof(StartRound), 10);
     }
 }
