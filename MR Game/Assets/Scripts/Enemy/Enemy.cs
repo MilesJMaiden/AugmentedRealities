@@ -7,44 +7,79 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public FireBulletOnActivate gun;
-
-    private NavMeshAgent agent;
-    private Animator animator;
+    public NavMeshAgent agent;
+    public Animator animator;
     public Transform playerHead;
     public Transform playerTarget;
 
     public float stopDistance = 6f;
+    public float health = 100f; 
 
     private Quaternion localRotationGun;
 
-    // Start is called before the first frame update
+    private GameManager gameManager;
+
+    void Awake()
+    {
+        // Find the OVRPlayer GameObject
+        GameObject playerGameObject = GameObject.Find("OVRPlayer");
+        if (playerGameObject != null)
+        {
+            playerTarget = playerGameObject.transform;
+
+            // Find the OVRPlayerCameraRig as a child of OVRPlayer
+            Transform cameraRigTransform = playerGameObject.transform.Find("OVRPlayerCameraRig");
+            if (cameraRigTransform != null)
+            {
+                // Assign the camera rig itself as the player head
+                playerHead = cameraRigTransform;
+
+                // If additional confirmation is needed, log a message
+                Debug.Log("OVRPlayerCameraRig assigned as player head");
+            }
+            else
+            {
+                Debug.LogError("OVRPlayerCameraRig not found as a child of OVRPlayer");
+            }
+        }
+        else
+        {
+            Debug.LogError("OVRPlayer not found in the scene");
+        }
+    }
+
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>(); 
         SetupRagdoll();
 
         localRotationGun = gun.bulletOrigin.transform.localRotation;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(playerTarget.position);
-
-        float distance = Vector3.Distance(playerTarget.position, transform.position);  
-        if (distance < stopDistance)
+        if (agent != null && agent.isActiveAndEnabled)
         {
-            agent.isStopped = true;
-            animator.SetBool("Shoot", true);
+            agent.SetDestination(playerTarget.position);
+
+            float distance = Vector3.Distance(playerTarget.position, transform.position);
+            if (distance < stopDistance)
+            {
+                agent.isStopped = true;
+                animator.SetBool("Shoot", true);
+            }
         }
+    }
+
+    public void SetGameManager(GameManager manager)
+    {
+        gameManager = manager;
     }
 
     public void ThrowGun()
     {
         gun.bulletOrigin.localRotation = localRotationGun;
-
         gun.transform.parent = null;
+
         //Maths Physics Method
         Rigidbody rb = gun.GetComponent<Rigidbody>();
         rb.velocity = BallisticVelocityVector(gun.transform.position, playerHead.position, 45f);
@@ -82,8 +117,22 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void TakeDamage(float damage, Vector3 hitPosition)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Dead(hitPosition); 
+        }
+    }
+
     public void Dead(Vector3 hitPosition)
     {
+
+        // Add a check to ensure the enemy is not already destroyed
+        if (this == null)
+            return;
+
         //loop through all limbs
         foreach (var item in GetComponentsInChildren<Rigidbody>())
         {
@@ -102,11 +151,26 @@ public class Enemy : MonoBehaviour
             }
         }
 
+        if (gameManager != null)
+        {
+            gameManager.EnemyKilled(gameObject);
+        }
 
         ThrowGun();
-        animator.enabled= false;
-        agent.enabled= false;
-        this.enabled= false;
+        animator.enabled = false;
+        agent.enabled = false;
 
+        // Safely destroy the enemy
+        SafeDestruction();
+
+    }
+
+    public void SafeDestruction()
+    {
+        // Stop all coroutines or any ongoing operations
+        StopAllCoroutines();
+
+        // Finally, destroy the object
+        Destroy(gameObject);
     }
 }

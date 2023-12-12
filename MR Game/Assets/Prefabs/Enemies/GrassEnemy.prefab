@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &700292946717690053
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &1330675475464582584
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &2402235486257393890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &2744635260493174901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &3265140115531684376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &3318153289701822245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,6 +1768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &3580964555500098814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,9 +1876,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 4734832232131860746}
+  agent: {fileID: 8433969457902351782}
+  animator: {fileID: 8669854870379678930}
   playerHead: {fileID: 0}
   playerTarget: {fileID: 0}
   stopDistance: 5
+  health: 100
 --- !u!195 &8433969457902351782
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2040,6 +2050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &5270027963936562602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &6114515856473727130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2348,6 +2360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &6457044505139133561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2526,6 +2539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: FireProjectile
   enemy: {fileID: 3027801604812581045}
+  baseDamage: 25
 --- !u!1 &6929818889698237335
 GameObject:
   m_ObjectHideFlags: 0
