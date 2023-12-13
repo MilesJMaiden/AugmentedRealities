@@ -10,6 +10,7 @@ public class Shield : MonoBehaviour
 
     private int hitCount = 0;
     private IEnumerator currentCoroutine;
+    private bool shieldEnabled = true;
 
     void Start()
     {
@@ -28,10 +29,14 @@ public class Shield : MonoBehaviour
 
     public void TakeHit()
     {
-        hitCount++;
+        //if (!shieldEnabled) { statManageer.PlayerShot(); return; } //if shield isnt currently active, player takes damage instead
+        
+        
+        hitCount++; //if player didnt take damage (shield is active) then do damage to shield
         if (hitCount >= shieldParts.Length)
         {
             DisableShield();
+            shieldEnabled = false;
             hitCount = 0; // Reset hit count after all parts are disabled
         }
         else
@@ -72,6 +77,7 @@ public class Shield : MonoBehaviour
         {
             part.SetActive(true);
         }
+        shieldEnabled = true;
     }
 
     private void DisableShield()

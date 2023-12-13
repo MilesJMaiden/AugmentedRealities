@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private float roundTimer;
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
+    public UIFillAmount uiFill;
+
     void Awake()
     {
         // Find the OVRPlayer in the scene
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         roundTimer -= Time.deltaTime;
         if (roundTimer <= 0 && spawnedEnemies.Count > 0)
-        {
+        { 
             GameOver();
         }
 
@@ -105,6 +107,7 @@ public class GameManager : MonoBehaviour
     {
         spawnedEnemies.Remove(enemy);
         score += 10; // Increase score
+        uiFill.scoreEdit(score);
     }
 
     void StartRound()
@@ -136,9 +139,12 @@ public class GameManager : MonoBehaviour
             }
         }
         spawnedEnemies.Clear();
-
         score = 0;
         currentRound = 1;
+
+
+
+        uiFill.scoreEdit(score);
 
         // Restart the round after a delay
         Invoke(nameof(StartRound), 10);

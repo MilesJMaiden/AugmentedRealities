@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HealtheBarMat
-  m_Shader: {fileID: 4800000, guid: c68f6151ccf47ca4dba0aaa7979765c0, type: 3}
+  m_Name: FireEnemy2
+  m_Shader: {fileID: 4800000, guid: d201666c5fdd88144a5fd2081d3742b2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -24,13 +24,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c34274bc8f6576a478e72c988838a573, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClipThreshold: 0.5
-    - _FillAmount: 0.83
+    - _ScrollAmount: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.7529412, g: 0.16317517, b: 0, a: 1}
+    - _YellowColor: {r: 1, g: 0.60387367, b: 0, a: 1}
   m_BuildTextureStacks: []
