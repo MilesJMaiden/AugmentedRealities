@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private float roundTimer;
     private List<GameObject> spawnedEnemies = new List<GameObject>();
 
+    public bool isGamePaused;
     public UIFillAmount uiFill;
 
     void Awake()
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         roundTimer -= Time.deltaTime;
         if (roundTimer <= 0 && spawnedEnemies.Count > 0)
-        { 
+        {
             GameOver();
         }
 
@@ -60,6 +61,32 @@ public class GameManager : MonoBehaviour
         {
             StartNextRound();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) || OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            if (isGamePaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
+    public void PauseGame()
+    {
+        //pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        isGamePaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        //pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        isGamePaused = false;
     }
 
     void SpawnEnemiesAroundPlayer(int enemyCount)
