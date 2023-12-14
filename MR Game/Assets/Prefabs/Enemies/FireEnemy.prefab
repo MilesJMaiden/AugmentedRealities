@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 431899067135715205}
   - component: {fileID: 814237034455199937}
   - component: {fileID: 2840920604855168795}
-  - component: {fileID: 1322191663719651746}
   m_Layer: 0
   m_Name: LowManHips
   m_TagString: FireEnemy
@@ -148,21 +147,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.32637978, y: 0.22039485, z: 0.2448703}
   m_Center: {x: 0.000000044703484, y: 0.3217587, z: -0.00000010430813}
---- !u!114 &1322191663719651746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664625019940146272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &977280387688753108
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +159,6 @@ GameObject:
   - component: {fileID: 1470789141555189232}
   - component: {fileID: 6168725072916848571}
   - component: {fileID: 2171037831422135494}
-  - component: {fileID: 2881294851939763685}
   m_Layer: 0
   m_Name: LowManLeftLeg
   m_TagString: FireEnemy
@@ -295,21 +278,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &2881294851939763685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977280387688753108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &1501268251050943813
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +404,8 @@ GameObject:
   - component: {fileID: 6462906056009326312}
   - component: {fileID: 1889873070526593821}
   - component: {fileID: 3488401289607630278}
+  - component: {fileID: 6982470691237734458}
+  - component: {fileID: 8362462112142660422}
   m_Layer: 0
   m_Name: FireEnemy
   m_TagString: FireEnemy
@@ -504,6 +474,7 @@ MonoBehaviour:
   animator: {fileID: 6462906056009326312}
   playerHead: {fileID: 0}
   playerTarget: {fileID: 0}
+  butterflys: {fileID: 0}
   stopDistance: 5
   health: 100
 --- !u!195 &3488401289607630278
@@ -528,6 +499,44 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &6982470691237734458
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898626563159610229}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.22
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97, z: 0}
+--- !u!114 &8362462112142660422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898626563159610229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: WaterProjectile
+  enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!1 &1985499608652240232
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +663,6 @@ GameObject:
   - component: {fileID: 4676597341255514007}
   - component: {fileID: 7253006233448677231}
   - component: {fileID: 3931766954468857596}
-  - component: {fileID: 7967994620447295454}
   m_Layer: 0
   m_Name: LowManSpine1
   m_TagString: FireEnemy
@@ -772,21 +780,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &7967994620447295454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2204537262476321950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &2515480075890029918
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,8 +791,8 @@ GameObject:
   - component: {fileID: 74273101055632957}
   - component: {fileID: 647325130766095106}
   - component: {fileID: 7363612881334137939}
-  - component: {fileID: 1248187084092773793}
   - component: {fileID: 5779009662325364498}
+  - component: {fileID: 1248187084092773793}
   m_Layer: 0
   m_Name: LowManRightArm
   m_TagString: FireEnemy
@@ -873,6 +866,21 @@ CapsuleCollider:
   m_Height: 0.2517582
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.1258791}
+--- !u!114 &5779009662325364498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515480075890029918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: WaterProjectile
+  enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!144 &1248187084092773793
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -919,21 +927,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &5779009662325364498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2515480075890029918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &3058976732803003080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1119,6 @@ GameObject:
   - component: {fileID: 5869257612639051952}
   - component: {fileID: 6288009650305905718}
   - component: {fileID: 7016402617289205690}
-  - component: {fileID: 5210806156369857071}
   m_Layer: 0
   m_Name: LowManRightLeg
   m_TagString: FireEnemy
@@ -1246,21 +1238,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &5210806156369857071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559203692807389516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &4085829668507905333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1250,6 @@ GameObject:
   - component: {fileID: 1604063788418880444}
   - component: {fileID: 8290815388862950874}
   - component: {fileID: 7456334021468015785}
-  - component: {fileID: 66792265892617356}
   m_Layer: 0
   m_Name: LowManLeftArm
   m_TagString: FireEnemy
@@ -1393,21 +1369,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &66792265892617356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4085829668507905333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &4133654813917347902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +1908,6 @@ GameObject:
   - component: {fileID: 372626080758192859}
   - component: {fileID: 5064261269598821544}
   - component: {fileID: 6012051077002294701}
-  - component: {fileID: 644257632056475853}
   m_Layer: 0
   m_Name: LowManLeftUpLeg
   m_TagString: FireEnemy
@@ -2067,21 +2027,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &644257632056475853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378149974741980071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &6414708072026759975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,8 +2216,8 @@ GameObject:
   - component: {fileID: 268618687887055015}
   - component: {fileID: 7359707773566791182}
   - component: {fileID: 6327687169304428681}
-  - component: {fileID: 691983735465473513}
   - component: {fileID: 5976222898877344140}
+  - component: {fileID: 691983735465473513}
   m_Layer: 0
   m_Name: LowManRightForeArm
   m_TagString: FireEnemy
@@ -2346,6 +2291,21 @@ CapsuleCollider:
   m_Height: 0.45179093
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.22589546}
+--- !u!114 &5976222898877344140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6789441649447882446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: WaterProjectile
+  enemy: {fileID: 1889873070526593821}
+  baseDamage: 25
 --- !u!144 &691983735465473513
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2392,21 +2352,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &5976222898877344140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6789441649447882446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &6840756241468771833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7375,7 +7320,6 @@ GameObject:
   - component: {fileID: 8553627699221252493}
   - component: {fileID: 2347706391641857931}
   - component: {fileID: 1505359279322133881}
-  - component: {fileID: 7678816172682292737}
   m_Layer: 0
   m_Name: LowManHead
   m_TagString: FireEnemy
@@ -7493,21 +7437,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &7678816172682292737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7671912923700489476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &8060697375979590951
 GameObject:
   m_ObjectHideFlags: 0
@@ -7699,7 +7628,6 @@ GameObject:
   - component: {fileID: 5507105111900045014}
   - component: {fileID: 6103272320840149817}
   - component: {fileID: 9131603244199118155}
-  - component: {fileID: 4421227556960354552}
   m_Layer: 0
   m_Name: LowManLeftForeArm
   m_TagString: FireEnemy
@@ -7819,21 +7747,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &4421227556960354552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8415852205491269961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &8564895639678085955
 GameObject:
   m_ObjectHideFlags: 0
@@ -7846,7 +7759,6 @@ GameObject:
   - component: {fileID: 2646324947472630435}
   - component: {fileID: 5299881667965734253}
   - component: {fileID: 7203475983751113914}
-  - component: {fileID: 8762420003708746858}
   m_Layer: 0
   m_Name: LowManRightUpLeg
   m_TagString: FireEnemy
@@ -7966,21 +7878,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &8762420003708746858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8564895639678085955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: WaterProjectile
-  enemy: {fileID: 1889873070526593821}
-  baseDamage: 25
 --- !u!1 &8765281719658665286
 GameObject:
   m_ObjectHideFlags: 0
@@ -8081,9 +7978,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -191.116
       objectReference: {fileID: 0}
+    - target: {fileID: 4755653057567846853, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4661015458268789596, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5546078559445136593}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
 --- !u!114 &3348008939113037502 stripped
@@ -8111,6 +8015,68 @@ Transform:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 9093856370371869442, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
   m_PrefabInstance: {fileID: 545177246348361708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3848183771732338047
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5133992576446039216}
+    m_Modifications:
+    - target: {fileID: 942857943160797479, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_Name
+      value: FireWand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+--- !u!4 &5546078559445136593 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8759747362779582894, guid: 38ab98fe0afeb364d871a5ac4ce69b11, type: 3}
+  m_PrefabInstance: {fileID: 3848183771732338047}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8624951022970379832
 PrefabInstance:

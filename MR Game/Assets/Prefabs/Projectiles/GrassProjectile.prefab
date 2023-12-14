@@ -162,7 +162,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67f7a47e03516f429c35741e5796e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleEffectPrefab: {fileID: 0}
+  particleEffectPrefab: {fileID: 4749739291071840895, guid: 2d21601c726f8f444a324017cb3957e7, type: 3}
   collisionSound: {fileID: 8300000, guid: 9a752d3328516a44384df0f171c8a5ca, type: 3}
   maxCollisions: 3
   decalPrefab: {fileID: 1900755009760761842, guid: edaedbe9a92d3ef4b91e5589954bfa07, type: 3}

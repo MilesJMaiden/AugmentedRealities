@@ -30,7 +30,7 @@ Shader "Meta/Depth/BiRP/GrassOrb"
             struct Attributes
             {
                 float4 vertex : POSITION;
-                float2 uv0 : TEXCOORD0;
+                float2 uv0 : TEXCOORD2;
                 float3 normal : NORMAL;
 
                 UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -40,7 +40,7 @@ Shader "Meta/Depth/BiRP/GrassOrb"
             {
                 float4 positionCS : SV_POSITION;
                 float3 positionWS : TEXCOORD1;
-                float2 uv0 : TEXCOORD0;
+                float2 uv0 : TEXCOORD2;
                 float3 worldNormal : NORMAL;
                 // 3. This macro adds required data field to the varyings struct
                 //    The number has to be filled with the recent TEXCOORD number + 1

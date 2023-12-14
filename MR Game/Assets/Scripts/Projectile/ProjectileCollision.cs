@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ProjectileCollision : MonoBehaviour
@@ -34,11 +35,14 @@ public class ProjectileCollision : MonoBehaviour
         hasCollided = true;
 
         // Check for collision with an enemy
-        if (IsEnemy(collision.gameObject))
-        {
-            HandleDestruction(collision.contacts[0].point);
-            return;
-        }
+         if (IsEnemy(collision.gameObject))
+         {
+             drasticMeasuresTestDestruction(collision);
+             return;
+         }
+        
+
+
 
         // Increment collision count and check if max collisions are reached
         collisionCount++;
@@ -97,6 +101,34 @@ public class ProjectileCollision : MonoBehaviour
             if (projectileDecal != null)
             {
                 projectileDecal.StartFadeOut(decalFadeOutTime);
+            }
+        }
+    }
+
+    private void drasticMeasuresTestDestruction(Collision collision)
+    {
+        if(gameObject.tag == "GrassProjectile")
+        {
+            if(collision.gameObject.tag == "WaterEnemy")
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+
+        if (gameObject.tag == "WaterProjectile")
+        {
+            if (collision.gameObject.tag == "FireEnemy")
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+
+
+        if (gameObject.tag == "FireProjectile")
+        {
+            if (collision.gameObject.tag == "GrassEnemy")
+            {
+                Destroy(collision.gameObject);
             }
         }
     }

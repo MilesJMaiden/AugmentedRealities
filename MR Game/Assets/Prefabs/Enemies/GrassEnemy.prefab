@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 611713654345938760}
   - component: {fileID: 2515549044629350221}
   - component: {fileID: 6186406841630147642}
-  - component: {fileID: 4458208962029906775}
   m_Layer: 0
   m_Name: LowManRightUpLeg
   m_TagString: GrassEnemy
@@ -132,21 +131,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &4458208962029906775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170913211672449325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &700292946717690053
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +289,6 @@ GameObject:
   - component: {fileID: 2549652397739845627}
   - component: {fileID: 2430524954792956009}
   - component: {fileID: 1622126391320227855}
-  - component: {fileID: 3570724548057904654}
   m_Layer: 0
   m_Name: LowManHead
   m_TagString: GrassEnemy
@@ -423,21 +406,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &3570724548057904654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256746641862359119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &1330675475464582584
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +743,6 @@ GameObject:
   - component: {fileID: 5123282624630475860}
   - component: {fileID: 4749955694404974009}
   - component: {fileID: 3187419969356689708}
-  - component: {fileID: 1680603769501596823}
   m_Layer: 0
   m_Name: LowManSpine1
   m_TagString: GrassEnemy
@@ -893,21 +860,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1680603769501596823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2035207854804369118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &2402235486257393890
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +903,6 @@ GameObject:
   - component: {fileID: 7727766778111900473}
   - component: {fileID: 746661355613768853}
   - component: {fileID: 1957007500767951579}
-  - component: {fileID: 7339618184591527312}
   m_Layer: 0
   m_Name: LowManRightArm
   m_TagString: GrassEnemy
@@ -1071,21 +1022,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &7339618184591527312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565324895731255647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &2744635260493174901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1212,6 @@ GameObject:
   - component: {fileID: 8742299628577932744}
   - component: {fileID: 4755233111879646275}
   - component: {fileID: 5145319835470397568}
-  - component: {fileID: 3960159021875039711}
   m_Layer: 0
   m_Name: LowManLeftLeg
   m_TagString: GrassEnemy
@@ -1396,21 +1331,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &3960159021875039711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2992635870634406194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &3265140115531684376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1375,6 @@ GameObject:
   - component: {fileID: 3353216420189114232}
   - component: {fileID: 695500549828641869}
   - component: {fileID: 5434491134100765758}
-  - component: {fileID: 1251285630465513900}
   m_Layer: 0
   m_Name: LowManRightLeg
   m_TagString: GrassEnemy
@@ -1575,21 +1494,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1251285630465513900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3268361643671569564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &3318153289701822245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1634,7 +1538,6 @@ GameObject:
   - component: {fileID: 5608980386402416243}
   - component: {fileID: 3543041424342704819}
   - component: {fileID: 2818516271117819555}
-  - component: {fileID: 7469499400521841949}
   m_Layer: 0
   m_Name: LowManLeftForeArm
   m_TagString: GrassEnemy
@@ -1754,21 +1657,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &7469499400521841949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3428010804844058921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &3580964555500098814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,6 +1701,7 @@ GameObject:
   - component: {fileID: 8669854870379678930}
   - component: {fileID: 3027801604812581045}
   - component: {fileID: 8433969457902351782}
+  - component: {fileID: -2035096123977977229}
   m_Layer: 0
   m_Name: GrassEnemy
   m_TagString: GrassEnemy
@@ -1880,6 +1769,7 @@ MonoBehaviour:
   animator: {fileID: 8669854870379678930}
   playerHead: {fileID: 0}
   playerTarget: {fileID: 0}
+  butterflys: {fileID: 0}
   stopDistance: 5
   health: 100
 --- !u!195 &8433969457902351782
@@ -1904,6 +1794,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &-2035096123977977229
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076278315679418816}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.22
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!1 &5267548662756112067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1829,6 @@ GameObject:
   - component: {fileID: 1006768813675164404}
   - component: {fileID: 6038862449173148878}
   - component: {fileID: 3552555706225113432}
-  - component: {fileID: 1437144288122981097}
   m_Layer: 0
   m_Name: LowManRightForeArm
   m_TagString: GrassEnemy
@@ -2036,21 +1948,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1437144288122981097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5267548662756112067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &5270027963936562602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +1960,6 @@ GameObject:
   - component: {fileID: 4436943628308715437}
   - component: {fileID: 3543426999566402803}
   - component: {fileID: 2926745123008275183}
-  - component: {fileID: 1889531876167970834}
   m_Layer: 0
   m_Name: LowManLeftUpLeg
   m_TagString: GrassEnemy
@@ -2183,21 +2079,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1889531876167970834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5270027963936562602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &6114515856473727130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,7 +2153,6 @@ GameObject:
   - component: {fileID: 274795840252307253}
   - component: {fileID: 4345728434255350995}
   - component: {fileID: 9214818840734505967}
-  - component: {fileID: 1333919957244130293}
   m_Layer: 0
   m_Name: LowManHips
   m_TagString: GrassEnemy
@@ -2346,21 +2226,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.32637978, y: 0.22039485, z: 0.2448703}
   m_Center: {x: 0.000000044703484, y: 0.3217587, z: -0.00000010430813}
---- !u!114 &1333919957244130293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6343313671010462810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &6457044505139133561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,7 +2270,6 @@ GameObject:
   - component: {fileID: 8898008745736182942}
   - component: {fileID: 6138521089335119966}
   - component: {fileID: 5470136287443074679}
-  - component: {fileID: 8692493702316281117}
   m_Layer: 0
   m_Name: LowManLeftArm
   m_TagString: GrassEnemy
@@ -2525,21 +2389,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &8692493702316281117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6606103305740900932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: FireProjectile
-  enemy: {fileID: 3027801604812581045}
-  baseDamage: 25
 --- !u!1 &6929818889698237335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,9 +3068,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -191.116
       objectReference: {fileID: 0}
+    - target: {fileID: 4755653057567846853, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4661015458268789596, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1178939346782944085}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
 --- !u!82 &1612290115573916506 stripped
@@ -3250,3 +3106,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cefec35d97b33479ae17801fa606a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &7526444599177661109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2953411087152653060}
+    m_Modifications:
+    - target: {fileID: 3381632159500020074, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_Name
+      value: GrassWand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+--- !u!4 &1178939346782944085 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8660178449318425056, guid: 31481ec8c0d26c5479d67dfdaa7dd662, type: 3}
+  m_PrefabInstance: {fileID: 7526444599177661109}
+  m_PrefabAsset: {fileID: 0}

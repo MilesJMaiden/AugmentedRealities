@@ -9,7 +9,7 @@ Shader "Meta/Depth/BiRP/FireEnemy"
 
     SubShader
     {
-        Tags { "RenderType" = "Opaque" }
+         Tags{ "RenderType"="Transparent" "Queue"="Transparent"}
 
         Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha
 

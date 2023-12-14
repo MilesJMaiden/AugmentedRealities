@@ -147,7 +147,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
+  - {fileID: 2100000, guid: 1f23cbfaae8fc2e49a58d49f9f284054, type: 2}
   - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -253,7 +253,6 @@ GameObject:
   - component: {fileID: 1494514861085975046}
   - component: {fileID: 8185748679633609588}
   - component: {fileID: 2792357893836351033}
-  - component: {fileID: 469262457958858911}
   m_Layer: 0
   m_Name: LowManLeftLeg
   m_TagString: WaterEnemy
@@ -373,21 +372,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &469262457958858911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519807475333038088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &1538257559953074886
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +448,6 @@ GameObject:
   - component: {fileID: 6029782968508216386}
   - component: {fileID: 5999039860042459855}
   - component: {fileID: 5227900021137462761}
-  - component: {fileID: 3766443447656802057}
   m_Layer: 0
   m_Name: LowManRightLeg
   m_TagString: WaterEnemy
@@ -584,21 +567,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &3766443447656802057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938262315117996829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &2043435867877512488
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +579,7 @@ GameObject:
   - component: {fileID: 1938281140192310988}
   - component: {fileID: 5445279375904867459}
   - component: {fileID: 6637460724322747397}
+  - component: {fileID: -3334837921959288080}
   m_Layer: 0
   m_Name: WaterEnemy
   m_TagString: WaterEnemy
@@ -678,6 +647,7 @@ MonoBehaviour:
   animator: {fileID: 1938281140192310988}
   playerHead: {fileID: 0}
   playerTarget: {fileID: 0}
+  butterflys: {fileID: 0}
   stopDistance: 5
   health: 100
 --- !u!195 &6637460724322747397
@@ -702,6 +672,29 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &-3334837921959288080
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043435867877512488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.22
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!1 &2119486252962377094
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +707,6 @@ GameObject:
   - component: {fileID: 5617998481943375551}
   - component: {fileID: 7306114344723363650}
   - component: {fileID: 649119610764618641}
-  - component: {fileID: 701035503702218561}
   m_Layer: 0
   m_Name: LowManLeftUpLeg
   m_TagString: WaterEnemy
@@ -834,21 +826,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &701035503702218561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119486252962377094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &2141193334047103850
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +903,6 @@ GameObject:
   - component: {fileID: 6591224712242423103}
   - component: {fileID: 1955505284294008898}
   - component: {fileID: 2055854722434631624}
-  - component: {fileID: 5289945757957516476}
   m_Layer: 0
   m_Name: LowManRightUpLeg
   m_TagString: WaterEnemy
@@ -1046,21 +1022,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &5289945757957516476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2646211278829581721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &3128144533450040963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1098,6 @@ GameObject:
   - component: {fileID: 8921635441264466291}
   - component: {fileID: 7657406555964527864}
   - component: {fileID: 6812245457997147781}
-  - component: {fileID: 8660408858284711057}
   m_Layer: 0
   m_Name: LowManLeftForeArm
   m_TagString: WaterEnemy
@@ -1257,21 +1217,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &8660408858284711057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3721728483214290860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &4100257993936990325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1260,6 @@ GameObject:
   - component: {fileID: 938560615788414610}
   - component: {fileID: 1975222843403193973}
   - component: {fileID: 4832229476964401406}
-  - component: {fileID: 4012177791065671063}
   m_Layer: 0
   m_Name: LowManLeftArm
   m_TagString: WaterEnemy
@@ -1435,21 +1379,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &4012177791065671063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146462325513975372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &4190479898072676607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1463,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
+  - {fileID: 2100000, guid: 1f23cbfaae8fc2e49a58d49f9f284054, type: 2}
   - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1607,7 +1536,6 @@ GameObject:
   - component: {fileID: 213687627616349722}
   - component: {fileID: 6745873862782980261}
   - component: {fileID: 4708237489344590851}
-  - component: {fileID: 3672981521992508281}
   m_Layer: 0
   m_Name: LowManHips
   m_TagString: WaterEnemy
@@ -1681,21 +1609,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.32637978, y: 0.22039485, z: 0.2448703}
   m_Center: {x: 0.000000044703484, y: 0.3217587, z: -0.00000010430813}
---- !u!114 &3672981521992508281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4422559586327088976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &4814407886013530988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1747,6 @@ GameObject:
   - component: {fileID: 4674250036798977232}
   - component: {fileID: 1152888313930223219}
   - component: {fileID: 235065152378932942}
-  - component: {fileID: 5340997771691030282}
   m_Layer: 0
   m_Name: LowManSpine1
   m_TagString: WaterEnemy
@@ -1952,21 +1864,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &5340997771691030282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5420665348314619696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &5494160648112549271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +1916,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
+  - {fileID: 2100000, guid: 1f23cbfaae8fc2e49a58d49f9f284054, type: 2}
   - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2093,7 +1990,6 @@ GameObject:
   - component: {fileID: 8434894986142180986}
   - component: {fileID: 8594095105946086530}
   - component: {fileID: 2340007106283129811}
-  - component: {fileID: 6929673663797884672}
   m_Layer: 0
   m_Name: LowManRightForeArm
   m_TagString: WaterEnemy
@@ -2213,21 +2109,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &6929673663797884672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5689318725801106348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &5704935327957575082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2161,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
+  - {fileID: 2100000, guid: 1f23cbfaae8fc2e49a58d49f9f284054, type: 2}
   - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2354,7 +2235,6 @@ GameObject:
   - component: {fileID: 2590730703468627238}
   - component: {fileID: 8857390050485937508}
   - component: {fileID: 1135727220031030792}
-  - component: {fileID: 275993884778161122}
   m_Layer: 0
   m_Name: LowManRightArm
   m_TagString: WaterEnemy
@@ -2474,21 +2354,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &275993884778161122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5988916760240264066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &6234426113766390231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,7 +2439,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
+  - {fileID: 2100000, guid: 1f23cbfaae8fc2e49a58d49f9f284054, type: 2}
   - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2680,7 +2545,6 @@ GameObject:
   - component: {fileID: 716071833248736998}
   - component: {fileID: 684765453778560231}
   - component: {fileID: 3209812560022854629}
-  - component: {fileID: 6090215461954651610}
   m_Layer: 0
   m_Name: LowManHead
   m_TagString: WaterEnemy
@@ -2798,21 +2662,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &6090215461954651610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7807897694447529166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de9a7fde85767945ad7a7e81cc8459b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: GrassProjectile
-  enemy: {fileID: 5445279375904867459}
-  baseDamage: 25
 --- !u!1 &7831348186949037733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,7 +2714,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
+  - {fileID: 2100000, guid: 1f23cbfaae8fc2e49a58d49f9f284054, type: 2}
   - {fileID: 2100000, guid: 980d9328457ea3a45ae15221cc0975f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3219,9 +3068,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -191.116
       objectReference: {fileID: 0}
+    - target: {fileID: 4755653057567846853, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4661015458268789596, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7377797301179898830}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
 --- !u!114 &4276505490764511014 stripped
@@ -3249,4 +3105,66 @@ Transform:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 9093856370371869442, guid: e4f794867c6bdec40a60eb027f2829f0, type: 3}
   m_PrefabInstance: {fileID: 1350917862408369780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9023994841370236218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5913275231876910376}
+    m_Modifications:
+    - target: {fileID: 121110037489413285, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_Name
+      value: WaterWand
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+--- !u!4 &7377797301179898830 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1970492999431180020, guid: 8f2a966be063f604089327651dd42e93, type: 3}
+  m_PrefabInstance: {fileID: 9023994841370236218}
   m_PrefabAsset: {fileID: 0}

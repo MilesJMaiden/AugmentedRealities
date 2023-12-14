@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public Transform playerHead;
     public Transform playerTarget;
-
+    public GameObject butterflys;
     public float stopDistance = 6f;
     public float health = 100f; 
 
@@ -182,6 +182,13 @@ public class Enemy : MonoBehaviour
         // Safely destroy the enemy
         SafeDestruction();
 
+    }
+
+    private IEnumerator butterflyExplosion()
+    {
+        GameObject butterflyParticles = Instantiate(butterflys, gameObject.transform);
+        yield return new WaitForSeconds(3);
+        Destroy(butterflyParticles);
     }
 
     public void SafeDestruction()
