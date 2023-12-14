@@ -6,7 +6,7 @@ public class RuntimeNavMeshBuilder : MonoBehaviour
 {
     public NavMeshSurface navMeshSurface;
 
-    void Start()
+    void Awake()
     {
         // Assuming navMeshSurface is already assigned
         if (navMeshSurface != null)

@@ -40,9 +40,6 @@ public class ProjectileCollision : MonoBehaviour
              drasticMeasuresTestDestruction(collision);
              return;
          }
-        
-
-
 
         // Increment collision count and check if max collisions are reached
         collisionCount++;
