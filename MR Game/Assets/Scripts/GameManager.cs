@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public bool isGamePaused;
     public UIFillAmount uiFill;
 
-    void Awake()
+    void Start()
     {
         // Find the OVRPlayer in the scene
         GameObject ovrPlayerGameObject = GameObject.Find("OVRPlayer");
@@ -42,10 +42,6 @@ public class GameManager : MonoBehaviour
             enemiesParentObj = new GameObject("Enemies");
         }
         enemiesParent = enemiesParentObj.transform;
-    }
-
-    void Start()
-    {
         StartRound();
     }
 

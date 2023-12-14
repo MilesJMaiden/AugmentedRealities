@@ -184,7 +184,7 @@ MonoBehaviour:
   maxCollisions: 3
   decalPrefab: {fileID: 1900755009760761842, guid: edaedbe9a92d3ef4b91e5589954bfa07, type: 3}
   decalFadeOutTime: 5
-  decalColor: {r: 1, g: 1, b: 1, a: 1}
+  decalColor: {r: 0.1986903, g: 1, b: 0, a: 1}
 --- !u!1 &2712404136760322584
 GameObject:
   m_ObjectHideFlags: 0
