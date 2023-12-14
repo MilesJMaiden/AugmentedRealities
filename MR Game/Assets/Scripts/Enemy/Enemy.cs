@@ -59,15 +59,34 @@ public class Enemy : MonoBehaviour
     {
         if (agent != null && agent.isActiveAndEnabled)
         {
-            agent.SetDestination(playerTarget.position);
-
             float distance = Vector3.Distance(playerTarget.position, transform.position);
-            if (distance < stopDistance)
+
+            if (distance > stopDistance)
             {
+                // Move towards the player and play running animation
+                agent.isStopped = false;
+                agent.SetDestination(playerTarget.position);
+                animator.SetBool("Run", true);
+                animator.SetBool("Shoot", false);
+            }
+            else
+            {
+                // Stop and shoot, play shooting animation
                 agent.isStopped = true;
+                animator.SetBool("Run", false);
                 animator.SetBool("Shoot", true);
+
+                // Face the player
+                FaceTarget();
             }
         }
+    }
+
+    void FaceTarget()
+    {
+        Vector3 direction = (playerTarget.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
     public void SetGameManager(GameManager manager)
