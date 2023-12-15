@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1958,7 +1958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1006560463
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3266,7 +3266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506055079
 Transform:
   m_ObjectHideFlags: 0
@@ -4664,6 +4664,14 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 563097594}
+    - target: {fileID: 1854452757824337747, guid: e1e506dc940fd744c9b4f4423bf4f5ac, type: 3}
+      propertyPath: maxSpawnDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854452757824337747, guid: e1e506dc940fd744c9b4f4423bf4f5ac, type: 3}
+      propertyPath: minEnemyDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3733465334655392593, guid: e1e506dc940fd744c9b4f4423bf4f5ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.18883929
