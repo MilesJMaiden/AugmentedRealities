@@ -1,34 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class enemySpawner : MonoBehaviour
 {
-    public GameObject EnemyPrefab; // enemy prefabs
-    public float IntervalTime = 5; // interval time
+    public GameObject[] EnemyPrefabs; // enemy prefabs
+    public float IntervalTime = 15; // interval time
     public Vector3 SpawnArea = new Vector3(10, 0, 10); // spaces
-    public float HealthIncrement = 10; // health increment
-    public float DamageIncrement = 5; // damage increment
-    public GameObject Player; //player
-    public PlayerAttributes PlayerAttributes;//health controller
+    public int HealthIncrement = 10; // health increment
+    public int DamageIncrement = 5; // damage increment
+    public PlayerAttributes PlayerAttributes;//player health controller
+    public EnemyHealth enemyHealth; // enemy health controller
 
-
-    private int EnemyCounter; // enemy number
-    private int EnemiesNumber = 15; // Number of enemies to spawn every time
+    public int enemyCounter; // enemy number
+    public int EnemiesNumber = 3; // Number of enemies to spawn every time
 
     void Start()
     {
-        if (Player == null)
-        {
-            Debug.LogError("Player object not found.");
-            return;
-        }
-        EnemyCounter = 0;
-        
-
+        enemyCounter = 0;
         if (PlayerAttributes == null)
         {
-            PlayerAttributes = Player.GetComponent<PlayerAttributes>();
+            PlayerAttributes = GetComponent<PlayerAttributes>();
             if (PlayerAttributes == null)
             {
                 Debug.LogError("PlayerAttributes script not found.");
@@ -36,29 +26,19 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        EnemyCounter = 0;
         for (int i = 0; i < EnemiesNumber; i++)
         {
-            CreateEnemy();
+            createEnemy();
         }
         InvokeRepeating("CreateEnemy", IntervalTime, IntervalTime);
     }
-        
-    void Update()
+
+
+    public void createEnemy()
     {
 
-    }
-
-    public class EnemyAttributes : MonoBehaviour
-    {
-        public float EnemyHp;
-        public float EnemyDamage;
-    }
-
-    public void CreateEnemy()
-    {
         // need to change the name of currentHp
-        if (PlayerAttributes.health > 0 && EnemyCounter < EnemiesNumber)
+        if (PlayerAttributes.health > 0 && enemyCounter < EnemiesNumber)
         {
             Vector3 spawnPosition = new Vector3(
                 Random.Range(-SpawnArea.x, SpawnArea.x),
@@ -66,12 +46,17 @@ public class EnemySpawner : MonoBehaviour
                 Random.Range(-SpawnArea.z, SpawnArea.z)
             );
 
-            GameObject newEnemy = Instantiate(EnemyPrefab, spawnPosition, Quaternion.identity);
+            int index = Random.Range(0, EnemyPrefabs.Length);
+            GameObject newEnemy = Instantiate(EnemyPrefabs[index], spawnPosition, Quaternion.identity);
 
-            newEnemy.GetComponent<EnemyAttributes>().EnemyHp += HealthIncrement;
-            newEnemy.GetComponent<EnemyAttributes>().EnemyDamage += DamageIncrement;
+            EnemyHealth enemyHealth = newEnemy.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.enemyHp += HealthIncrement;
+                enemyHealth.enemyDamage += DamageIncrement;
+            }
 
-            EnemyCounter++;
+            enemyCounter++;
         }
 
         else
@@ -80,5 +65,5 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    
+
 }
