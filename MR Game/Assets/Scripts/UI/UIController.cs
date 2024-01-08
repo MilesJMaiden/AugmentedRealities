@@ -1,56 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;  // Add this line
+using TMPro;
+using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public Text healthText;
-    public Text killCountText;
-    public Text timeText;
-    public Text bulletText;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI killCountText;
+    public TextMeshProUGUI timeText;
 
     public int currentHealth;
     public int killCount;
-    public float TimeLeft = 15;
-    public int CurrentBullet;
-    public int maxBullet;
+    public float timeLeft = 15;
 
     // Reference to other scripts
 
-    public PlayerAttributes PlayerAttributes;
-    public EnemySpawner EnemySpawner;
-    //public GunController GunController;
+    public PlayerAttributes playerAttributes;
+    public EnemySpawner enemySpawner;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        UpdateKillCountUI();
+        UpdateHealthUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Pull data from other scripts
-        if (PlayerAttributes != null) currentHealth = PlayerAttributes.health;
-      //  if (EnemySpawner != null) killCount = ;
-        //if (GunController != null)
-        //{
-       //     CurrentBullet = GunController.CurrentBullet;
-       //     maxBullet = GunController.MaxBullet;
-      //  }
-
-        // Display values in UI
-        healthText.text = "Health: " + currentHealth;
-        killCountText.text = "Kill Count: " + killCount;
-        bulletText.text = "Bullet: " + CurrentBullet + "/" + maxBullet;
-
-        // Update countdown timer
-        TimeLeft -= UnityEngine.Time.deltaTime;
-        if (TimeLeft <= 0)
+        UpdateTimeUI();
+    }
+    public void UpdateHealthUI()
+    {
+        if (playerAttributes != null)
         {
-            TimeLeft = 15; // reset timer
+            healthText.text = $"Health: {playerAttributes.health}";
         }
-        timeText.text = "Time: " + Mathf.Round(TimeLeft);
+    }
+
+    public void UpdateKillCountUI()
+    {
+        if (enemySpawner != null)
+        {
+            killCountText.text = $"Kill Count: {enemySpawner.enemyCounter}";
+        }
+    }
+
+    public void UpdateTimeUI()
+    {
+        // Update countdown timer
+        timeLeft -= UnityEngine.Time.deltaTime;
+        if (timeLeft <= 0)
+        {
+            timeLeft = 15; // reset timer
+        }
+        timeText.text = $"Time: {Mathf.Round(timeLeft)}";
     }
 }
