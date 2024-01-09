@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSpawner : MonoBehaviour
+
+public class itemSpawner : MonoBehaviour
 {
     public GameObject[] ItemPrefabs;
     public Vector3 SpawnArea = new Vector3(10, 0, 10);
-    public float MinSpawnTime = 10;
-    public float MaxSpawnTime = 30;
+    public float MinSpawnTime = 30;
+    public float MaxSpawnTime = 60;
 
     private void Start()
     {
